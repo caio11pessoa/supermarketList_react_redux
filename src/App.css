@@ -3,13 +3,41 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 50vmin;
   pointer-events: none;
+  margin: 2px;
+}
+
+.linha{
+  display: flex;
+  flex-flow: row wrap;
+  }
+
+.coluna-36 {
+  width: 35%;
+}
+.coluna-64 {
+  margin: 15px;
+  width: 60%;
+  
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row > button {
+  margin-left: 4px;
+  margin-right: 8px;
+}
+.row:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
+    animation: App-logo-float infinite 5s ease-in-out;
   }
 }
 

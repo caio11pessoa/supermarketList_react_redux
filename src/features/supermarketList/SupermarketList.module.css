@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: auto;
 }
 
 .row > button {
@@ -12,10 +13,35 @@
   margin-bottom: 16px;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.tab {
+  overflow-x:auto;
+  max-height: 280px;
+}
+
 .value {
-  font-size: 78px;
+  font-size: 32px;
   padding-left: 16px;
   padding-right: 16px;
+  margin-top: 2px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.valuep {
+  font-size: 30px;
+  padding-left: 12px;
+  padding-right: 12px;
   margin-top: 2px;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -34,14 +60,24 @@
   background-color: rgba(112, 76, 182, 0.1);
   border-radius: 2px;
   transition: all 0.15s;
+  margin: 10px;
 }
 
 .textbox {
-  font-size: 32px;
+  font-size: 28px;
   padding: 2px;
-  width: 64px;
-  text-align: center;
+  width: 300px;
+  text-align: left;
   margin-right: 4px;
+  height: 28px;
+}
+.textboxp {
+  font-size: 28px;
+  padding: 2px;
+  max-width: 60px;
+  text-align: left;
+  margin-right: 4px;
+  height: 28px;
 }
 
 .button:hover,
