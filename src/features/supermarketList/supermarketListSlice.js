@@ -28,9 +28,9 @@ export const supermarketListSlice = createSlice({
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     decrementItem: (state, action) => {
-      state.amount -= action.payload.especific.cost * action.payload.especific.quantity;
-      state.totalItems -= action.payload.especific.quantity;
-      state.items = action.payload.all.filter(item => item.uuid !== action.payload.especific.uuid)
+      state.amount -= action.payload.specific.cost * action.payload.specific.quantity;
+      state.totalItems -= action.payload.specific.quantity;
+      state.items = action.payload.all.filter(item => item.uuid !== action.payload.specific.uuid)
 
     },
     incrementItem: (state, action) => {

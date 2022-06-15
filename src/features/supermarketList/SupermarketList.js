@@ -68,7 +68,7 @@ export function SupermarketList() {
                   <button
                     className={styles.button}
                     aria-label="Decrement value"
-                    onClick={() => dispatch(decrementItem({especific:item, all:items}))}
+                    onClick={() => dispatch(decrementItem({specific:item, all:items}))}
                   >
                     -
                   </button>
