@@ -5,8 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 const initialState = {
   amount: Number(0),
   totalItems: Number(0),
-  items: [
-  ],
+  items: [],
 };
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -29,18 +28,19 @@ export const supermarketListSlice = createSlice({
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     decrementItem: (state, action) => {
-      state.amount -= action.payload.cost;
-      state.totalItems -= action.payload.quantity
+      state.amount -= action.payload.especific.cost * action.payload.especific.quantity;
+      state.totalItems -= action.payload.especific.quantity;
+      state.items = action.payload.all.filter(item => item.uuid !== action.payload.especific.uuid)
 
-      state.items.splice(action.payload, 1);
     },
     incrementItem: (state, action) => {
 
       action.payload.uuid = uuidv4()
 
-      state.items.push(action.payload)
       state.amount += action.payload.cost * action.payload.quantity;
       state.totalItems += action.payload.quantity;
+      state.items.push(action.payload)
+      // console.log(state.items[0].quantity, state.amount);
 
     },
   },
